@@ -12,22 +12,11 @@
 
 	ChartJS.register(Title, Tooltip, Legend, ArcElement, ChartDataLabels);
 
+	const { config } = defineProps(['config']);
+
 	const chartData = ref({
-		labels: ['Marketing', 'Accounts', 'Analytics', 'IT', 'Operations', 'HR'],
-		datasets: [
-			{
-				label: 'Data One',
-				backgroundColor: [
-					'#EFB61F',
-					'#FF1493',
-					'#FF8234',
-					'#9A11A7',
-					'#330099',
-					'#6fa8dc',
-				],
-				data: [40, 20, 12, 50, 10, 30],
-			},
-		],
+		labels: config.labels,
+		datasets: config.datasets,
 	});
 
 	const chartOptions = ref({

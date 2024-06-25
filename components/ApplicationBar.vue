@@ -19,17 +19,11 @@
 		LinearScale
 	);
 
-	const chartData = ref({
-		labels: ['Job Boards', 'Website', 'Social Media', 'Referral'],
+	const { config } = defineProps(['config']);
 
-		datasets: [
-			{
-				data: [31, 28, 21, 20],
-				backgroundColor: ['#ff43a9'],
-				barThickness: 40, // Decrease bar width (adjust as needed)
-				data: [31, 28, 21, 20],
-			},
-		],
+	const chartData = ref({
+		labels: config.labels,
+		datasets: config.datasets,
 	});
 
 	const chartOptions = ref({

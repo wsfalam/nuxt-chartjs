@@ -1,0 +1,56 @@
+{
+	"department": {
+		"labels": ["Marketing", "Accounts", "Analytics", "IT", "Operations", "HR"],
+		"datasets": [
+			{
+				"label": "Data One",
+				"backgroundColor": [
+					"#EFB61F",
+					"#FF1493",
+					"#FF8234",
+					"#9A11A7",
+					"#330099",
+					"#6fa8dd"
+				],
+				"data": [40, 20, 12, 50, 10, 30]
+			}
+		]
+	},
+
+	"gender": {
+		"labels": ["Male", "Female"],
+		"datasets": [
+			{
+				"label": "Data One",
+				"backgroundColor": ["#330099", "#6fa8dc"],
+				"data": [40, 60]
+			}
+		]
+	},
+
+	"application": {
+		"labels": ["Job Boards", "Website", "Social Media", "Referral"],
+
+		"datasets": [
+			{
+				"label": "Data One",
+				"backgroundColor": ["#ff43a9"],
+				"barThickness": 40,
+				"data": [31, 28, 21, 20]
+			}
+		]
+	},
+
+	"withdrawl": {
+		"datasets": [
+			{
+				"data": 62,
+				"backgroundColor": ["#6fa8dc", "#ddd"],
+
+				"borderWidth": 1,
+				"circumference": 180,
+				"rotation": 270
+			}
+		]
+	}
+}

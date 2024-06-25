@@ -12,17 +12,24 @@
 
 	ChartJS.register(Title, Tooltip, Legend, ArcElement, ChartDataLabels);
 
-	const chartData = ref({
-		datasets: [
-			{
-				data: [57.29, 42.71],
-				backgroundColor: ['#6fa8dc', '#ddd'],
+	const { config } = defineProps(['config']);
+	const emit = defineEmits(['percentage']);
 
-				borderWidth: 1,
-				circumference: 180,
-				rotation: 270,
-			},
-		],
+	const modifiedDatasets = config.datasets.map((dataset) => {
+		if (typeof dataset.data === 'number') {
+			const percentage = ((dataset.data / 100) * 100).toFixed(2);
+			emit('percentage', `${percentage}%`);
+
+			return {
+				...dataset,
+				data: [dataset.data, 100 - dataset.data],
+			};
+		}
+		return dataset; // return unchanged if data property is missing or not an array
+	});
+
+	const chartData = ref({
+		datasets: modifiedDatasets,
 	});
 
 	const chartOptions = ref({
