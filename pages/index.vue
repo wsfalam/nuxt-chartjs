@@ -9,13 +9,12 @@
 	const percentage = ref(null);
 
 	const getPercentage = (value) => {
-		console.log(value);
 		percentage.value = value;
 	};
 </script>
 
 <template>
-	<div class="max-w-screen-xl mx-auto my-12">
+	<div class="max-w-screen-xl mx-auto my-12 px-4">
 		<div class="grid grid-cols-[65fr_35fr] gap-4">
 			<div class="bg-white shadow-sm rounded-sm px-6 py-4">
 				<h2 class="text-lg font-semibold text-gray-700">
